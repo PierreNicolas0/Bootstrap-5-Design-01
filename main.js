@@ -1,9 +1,9 @@
 let switcherlis = document.querySelectorAll(".switcher li");
-let imgs = document.querySelectorAll(".work .row img");
+let holders = document.querySelectorAll(".work .holder");
 
 switcherlis.forEach((li) => {
   li.addEventListener("click", removeActive);
-  li.addEventListener("click", manageImgs);
+  li.addEventListener("click", manageBoxes);
 });
 
 // Remove Active Class From All Lis And Add To Current
@@ -15,9 +15,9 @@ function removeActive() {
 }
 
 // Manage Imgs
-function manageImgs() {
-  imgs.forEach((img) => {
-    img.style.display = "none";
+function manageBoxes() {
+  holders.forEach((holder) => {
+    holder.style.display = "none";
   });
   document.querySelectorAll(this.dataset.cat).forEach((el) => {
     el.style.display = "block";
